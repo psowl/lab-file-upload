@@ -1,0 +1,23 @@
+<div id="form">
+  <h2>Post-form</h2>
+
+  <form action="/post-form" method="POST" enctype="multipart/form-data">
+    <label for="input-content">Content</label>
+    <input type="text" id="input-content" name="content" />
+
+    <label for="input-creatorId">Creator Id</label>
+    <input type="text" id="input-creatorId" name="creatorId"/>
+
+    <label for="image-picPath">Pic path</label>
+    <input type="file" name="picPath" id="image-picPath"/>
+
+    <label for="input-picName">Pic name</label>
+    <input type="text" name="image" id="input-picName"/>
+
+    <button type="submit">Create the post</button>
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
